@@ -14,7 +14,7 @@ on:
   release:
     types: [published]
 env:
-  IMAGE_NAME: "ghcr.io/${{ github.repository_owner }}/codespaces-nix"
+  IMAGE_NAME: "ghcr.io/cschank/codespaces-nix"
 jobs:
   build:
     name: Docker Build
