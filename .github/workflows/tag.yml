@@ -32,7 +32,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Tag
         env:
-          SRC: "ghcr.io/${{ steps.string.owner.lowercase }}/codespaces-nix:${{ inputs.src }}"
+          SRC: "ghcr.io/${{ steps.owner.outputs.lowercase }}/codespaces-nix:${{ inputs.src }}"
           DST: "${{ inputs.dst }}"
         run: |
           IFS=' ' read -r -a dst_tags <<< "$DST"
